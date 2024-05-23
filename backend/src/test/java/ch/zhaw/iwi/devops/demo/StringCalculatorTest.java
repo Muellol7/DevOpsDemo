@@ -22,5 +22,11 @@ public class StringCalculatorTest {
         });
         assertEquals("Negatives not allowed: [-2, -4]", exception.getMessage());
 
+        assertEquals(2, calculator.add("1000,2"));
+        assertEquals(1002, calculator.add("2,1000"));
+        assertEquals(2, calculator.add("1001,2"));
+        assertEquals(1002, calculator.add("1001,1000,2"));
+        assertEquals(1005, calculator.add("1000,1005,0,5"));
+
     }
 }
