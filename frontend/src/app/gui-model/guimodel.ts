@@ -151,7 +151,17 @@ export class GuiModel {
                     "id": "historie",
                     "elementList": [
                         {
+                            "type": "pageLabel",
+                            "value": "<h4>Willkommen bei der Historie von Muellol7</h4>",
+                            "newRow": true
+                        },
+                        {
                             "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "value": "<button id='timeButton'>Aktuelle Zeit anzeigen</button>",
+                            "newRow": false
                         },
                     ]
                 }
