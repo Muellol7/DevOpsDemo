@@ -20,12 +20,7 @@ public class StringCalculator {
         
         String[] numberArray = numbers.split(delimiter);
         int sum = 0;
-        
-        
-        for (String number : numberArray) {
-            sum += Integer.parseInt(number);
-        }
-        
+                          
         List<Integer> negativeNumbers = new ArrayList<>();
         
         for (String number : numberArray) {
