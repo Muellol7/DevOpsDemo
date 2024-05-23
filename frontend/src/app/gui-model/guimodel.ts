@@ -3,7 +3,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024",
+            "title": "Muellol7 - FS24 DevOps",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -95,7 +95,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>Willkommen bei der ToDo-Liste von Muellol7</h4>",
                             "newRow": true
                         },
                         {
@@ -106,6 +106,15 @@ export class GuiModel {
                             "page": "toDoPage",
                             "width": 2,
                             "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Historie" },
+                            "icon": "fa-file-alt",
+                            "color": "blue",
+                            "page": "historie",
+                            "width": 2,
+                            "newRow": false,
                         },
                     ]
                 },
@@ -138,6 +147,14 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "historie",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                }
             ]
         }
     };
