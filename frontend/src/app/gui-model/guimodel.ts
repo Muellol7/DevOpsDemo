@@ -53,6 +53,41 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "HistorieForm",
+                    "title": { default: "Historie" },
+                    "url": "/historie",
+                    "formFieldList": [
+                        {
+                            "id":   "title",
+                            "type": "text",
+                            "name": { default: "Titel" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": { default: "Text" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
                     "id": "ToDoForm",
                     "title": { default: "ToDo" },
                     "url": "/todo",
@@ -112,7 +147,7 @@ export class GuiModel {
                             "name": { default: "Historie" },
                             "icon": "fa-file-alt",
                             "color": "blue",
-                            "page": "historie",
+                            "page": "Historie",
                             "width": 2,
                             "newRow": false,
                         },
@@ -148,7 +183,7 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "historie",
+                    "id": "Historie",
                     "elementList": [
                         {
                             "type": "pageLabel",
@@ -159,10 +194,27 @@ export class GuiModel {
                             "type": "backbutton",
                         },
                         {
-                            "type": "button",
-                            "value": "<button id='timeButton'>Aktuelle Zeit anzeigen</button>",
-                            "newRow": false
+                            "type": "newButton",
+                            "name": { default: "Neue Historie"},
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "width": 2,
+                            "newRow": false,
+                            "form" : {
+                                "form" : "HistorieForm"
+                            }
                         },
+                        {
+                            "type": "list",
+                            "name": "Historie",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/historie",
+                            "form": {
+                                "form": "HistorieForm"
+                            }
+                        }                        
                     ]
                 }
             ]
