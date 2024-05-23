@@ -1,5 +1,8 @@
 package ch.zhaw.iwi.devops.demo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringCalculator {
     public int add (String numbers) {
         
@@ -23,6 +26,21 @@ public class StringCalculator {
             sum += Integer.parseInt(number);
         }
         
+        List<Integer> negativeNumbers = new ArrayList<>();
+        
+        for (String number : numberArray) {
+            int num = Integer.parseInt(number);
+            if (num < 0) {
+                negativeNumbers.add(num);
+            } else {
+                sum += num;
+            }
+        }
+        
+        if (!negativeNumbers.isEmpty()) {
+            throw new IllegalArgumentException("Negatives not allowed: " + negativeNumbers);
+        }
+
         return sum;    
     }
     
