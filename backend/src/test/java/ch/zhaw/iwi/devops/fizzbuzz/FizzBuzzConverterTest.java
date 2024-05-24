@@ -3,7 +3,7 @@ package ch.zhaw.iwi.devops.fizzbuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class FizzBuzzConverterTest {
+class FizzBuzzConverterTest {
 
     @Test
     public void fizzBuzzConverter1() {
