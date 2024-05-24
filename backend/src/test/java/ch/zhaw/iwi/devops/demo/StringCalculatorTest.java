@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class StringCalculatorTest {
    
     @Test
-    public void StringCalculatorAdd() {
+    void StringCalculatorAdd() {
         StringCalculator calculator = new StringCalculator();
 
         assertEquals(0, calculator.add(""));
