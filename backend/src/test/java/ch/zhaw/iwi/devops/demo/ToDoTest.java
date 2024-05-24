@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class ToDoTest {
 
     @Test
-    public void testToDo() {
+    void testToDo() {
         var toDo1 = new ToDo(1, "title", "description");
         assertEquals("title", toDo1.getTitle());
         assertEquals("description", toDo1.getDescription());
