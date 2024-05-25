@@ -10,8 +10,8 @@ class StringCalculatorTest {
     void StringCalculatorAdd() {
         StringCalculator calculator = new StringCalculator();
 
-        assertEquals(4, calculator.add(""));
-        assertEquals(5, calculator.add(""));
+        assertEquals(5, calculator.add("2,3"));
+        assertEquals(15, calculator.add("10,5"));
         assertEquals(0, calculator.add(""));
         assertEquals(1, calculator.add("1"));
         assertEquals(3, calculator.add("1,2"));
